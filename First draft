@@ -1,0 +1,26 @@
+
+class Airports:
+
+
+class Runaways :
+
+
+
+class Planes:
+
+
+
+class Departure :
+
+
+
+
+class Landing:
+
+
+
+
+
+class TrafficControllers:
+    def _init__(self):
+        AirtrafficControllers= [Meg,Mike,Mohammed,Jarrod,Ray]
