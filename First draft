@@ -1,26 +1,45 @@
 
-class Airports:
+
+print("Welcome to Lolwa 's Air Traffic control limited system LOG-IN portal")
+username= input("UserName:")
+
+passw="12QA3456_"
+
+# Only limited too
+AirtrafficControllers= ["Meg,Mike,Mohammed,Jarrod,Ray"]
+
+# security system needs fixing 
+while username != AirtrafficControllers :
+    print(" ERROR \n You are not Authorised to access this system")
+    break
+    if username == AirtrafficControllers :
+        password= input("Password:")
+    elif username == AirtrafficControllers and passw!= password:
+         print("ERROR \n You are not Authorised to access this system ")
+    else:
+        if username == AirtrafficControllers and passw == password:
+            print("Loading... \n ACCESS GRANTED")
+    
+    
+    
 
 
-class Runaways :
+# class Airports: 
+# 
+# class Runaways :
+# 
+# 
+# 
+# class Planes:
+# 
+# 
+# 
+# class Departure :
+# 
+# 
+# 
+# 
+# class Landing:
 
 
 
-class Planes:
-
-
-
-class Departure :
-
-
-
-
-class Landing:
-
-
-
-
-
-class TrafficControllers:
-    def _init__(self):
-        AirtrafficControllers= [Meg,Mike,Mohammed,Jarrod,Ray]
