@@ -1,45 +1,30 @@
 
+print("Welcome to Lolwa 's Air Traffic control limited system  LOG-IN portal")
+passw="12QA3456_"
+# Only limited to:
+AirtrafficControllers= ["Meg" , "Mike" , "Mohammed" , "Jarrod" , "Ray "]
 
-print("Welcome to Lolwa 's Air Traffic control limited system LOG-IN portal")
+# LOGIN :
+
 username= input("UserName:")
 
-passw="12QA3456_"
-
-# Only limited too
-AirtrafficControllers= ["Meg,Mike,Mohammed,Jarrod,Ray"]
-
-# security system needs fixing 
-while username != AirtrafficControllers :
-    print(" ERROR \n You are not Authorised to access this system")
-    break
-    if username == AirtrafficControllers :
-        password= input("Password:")
-    elif username == AirtrafficControllers and passw!= password:
-         print("ERROR \n You are not Authorised to access this system ")
+while True:
+    if username in AirtrafficControllers :
+        print("Welcome back  " + username)
+        password = input("Password:")
+        break
     else:
-        if username == AirtrafficControllers and passw == password:
-            print("Loading... \n ACCESS GRANTED")
-    
-    
-    
+        print("ACCESS DENIED")
+    if password == passw:
+        print("LOADING...\n ACCESS GRANTED")
+        break
+    else:
+        print("ACCESS DENIED ")
+        break
 
 
-# class Airports: 
-# 
-# class Runaways :
-# 
-# 
-# 
-# class Planes:
-# 
-# 
-# 
-# class Departure :
-# 
-# 
-# 
-# 
-# class Landing:
+command = input("Select num to trigger command : \n 1: Track Airplane \n 2: Secure Departure \n 3: Secure Landing \n 4:Logout \n")
 
-
+while command != "4":
+    print("LOADING...")
 
