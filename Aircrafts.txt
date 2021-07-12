@@ -1,0 +1,15 @@
+
+
+Aircraft:		Seating capacity:
+Airbus A320-200		132
+Airbus A321-200		182	
+Airbus A330-200		260	
+Airbus A330-300		295
+Airbus A350-900		283
+Boeing 787-8		254
+Boeing 777-200LR	276
+Boeing 777-200LR	272	
+Boeing 777-300ER	354
+Boeing 777-300ER	412
+Boeing 787 Dreamliner	254
+
