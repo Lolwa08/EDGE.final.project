@@ -1,4 +1,5 @@
 import random
+
 N=(random.randint(10,90))
 S=(random.randint(10,90))
 E=(random.randint(10,90))
@@ -7,35 +8,12 @@ t=(random.randint(0,60))
 
 class AirCrafts:
     def __int__(self):
-        self.Aircrafts= ["Airbus A320-200","Airbus A321-200","Airbus A330-200","Airbus A330-300	","Airbus A350-900","Boeing 787-8","Boeing 777-200LR"-"Boeing 777-200LR","	Boeing 777-300ER","Boeing 777-300ER","Boeing 787 Dreamliner"]
+        self.Aircrafts= ["Airbus A320-200","Airbus A321-200","Airbus A330-200","Airbus A330-300	","Airbus A350-900","Boeing 787-8","Boeing 777-200LR"-"Boeing 777-200LR","Boeing 777-300ER","Boeing 777-300ER","Boeing 787 Dreamliner"]
         self.SeatingCap=[132,182,260,295,283,254,276,272,354,412,254]
 
     def _repr_(self):
         return self.Aircrafts
         return self.SeatingCap
-
-
-class Runaways:
-
-     def __int__(self):
-         self.MainRunaway=["R1","R2"]
-         self.SubRunawayDeparture=["A","B","C","D","E"]
-         self.SubRunawayArrival=["A","B","C","D","E"]
-     def _repr_(self):
-        return self.MainRunaway
-        return self.SubRunawayDeparture
-        return self.SubRunawayArrival
-
-class Departure(Runaways) :
-
-    def DepRunaways(self):
-        self.DepRunaways = "R1"+ self.SubRunawayDeparture
-
-class Landing(Runaways):
-
-     def AriRunaways (self):
-         self.AriRunaways = "R2"+ self.SubRunawayArrival
-
 
 print("Welcome to Lolwa 's Air Traffic control (limited) LOG-IN portal")
 passw="12QA3456_"
@@ -60,27 +38,71 @@ while True:
                     print("[--Airplane Tracking--]\n\n Enter Aircraft's Name and seating capacity")
                     planeName=input("Name: ")
                     planeCap=input("Seating Capacity:")
-                    print ("Currently tracking"+ planeName+"...")
-                    print("N "+str(N) , "S "+str(S) , "W "+str(E),"E "+str(W) )
+                    print ("Currently tracking "+ planeName+"...")
+                    print("N"+str(N) , "S"+str(S) , "W"+str(E),"E"+str(W) )
                     print( "Estimated time of arrival  "+ str(t)+ " Min..." )
+                    command = input("Ok, what else?")
                 elif command =="2":
                     print("[--Securing runaway for Departure--] \n Avaliable Runaways ")
-                    runaway= Departure()
-                    runaway.DepRunaways()
-                    print(runaway + "is currently avaliable")
-
-
-                else:
-                    command=input("Ok what else?")
-                    break
-
-
-
+                    planeName=input("Name: ")
+                    file = open("Runaways.txt","r")
+                    print(file.read())
+                    print("Currently R2: A,B,C are not avaliable")
+                    print("Direct " + planeName + " to one of the avaliable runaways")
+                    command = input("Ok, what else?")
+                elif command =="3":
+                    print("[--Securing runaway for Airrival--] \n Avaliable Runaways ")
+                    planeName=input("Name: ")
+                    file = open("Runaways.txt","r")
+                    print(file.read())
+                    print("Currently R1: C,D,E are not avaliable")
+                    print("Direct " + planeName + " to one of the avaliable runaways")
+                    command = input("Ok, what else?")
+                elif command =="4":
+                    print("LOADING... \n SAVING CHANGES... \n "+username +"LOG OUT")
         else:
             print("ACCESS DENIED ")
             break
+    if command =="4" and username in AirtrafficControllers  :
+        print("LOADING... \n SAVING CHANGES... \n "+username +"LOG OUT")
+        break
+
     else:
         print("ACCESS DENIED")
         break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
