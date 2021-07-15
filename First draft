@@ -6,16 +6,14 @@ E=(random.randint(10,90))
 W=(random.randint(10,90))
 t=(random.randint(0,60))
 
-class AirCrafts:
-    def __int__(self):
-        self.Aircrafts= ["Airbus A320-200","Airbus A321-200","Airbus A330-200","Airbus A330-300	","Airbus A350-900","Boeing 787-8","Boeing 777-200LR"-"Boeing 777-200LR","Boeing 777-300ER","Boeing 777-300ER","Boeing 787 Dreamliner"]
-        self.SeatingCap=[132,182,260,295,283,254,276,272,354,412,254]
+# PLanes currently logged in system:
+Aircrafts= ["Airbus A320-200","Airbus A321-200","Airbus A350-900","Boeing 787-8","Boeing 777-200LR","Boeing 777-200LR","Boeing 787 Dreamliner"]
 
-    def _repr_(self):
-        return self.Aircrafts
-        return self.SeatingCap
+SeatingCap=[132,182,260,295,283,254,276]
+
 
 print("Welcome to Lolwa 's Air Traffic control (limited) LOG-IN portal")
+
 passw="12QA3456_"
 
 # Only limited to:
@@ -38,6 +36,9 @@ while True:
                     print("[--Airplane Tracking--]\n\n Enter Aircraft's Name and seating capacity")
                     planeName=input("Name: ")
                     planeCap=input("Seating Capacity:")
+                    Aircrafts.append(planeName)
+                    SeatingCap.append(planeCap)
+                    print(Aircrafts)
                     print ("Currently tracking "+ planeName+"...")
                     print("N"+str(N) , "S"+str(S) , "W"+str(E),"E"+str(W) )
                     print( "Estimated time of arrival  "+ str(t)+ " Min..." )
@@ -51,58 +52,19 @@ while True:
                     print("Direct " + planeName + " to one of the avaliable runaways")
                     command = input("Ok, what else?")
                 elif command =="3":
-                    print("[--Securing runaway for Airrival--] \n Avaliable Runaways ")
+                    print("[--Securing runaway for Arrival--] \n Avaliable Runaways ")
                     planeName=input("Name: ")
                     file = open("Runaways.txt","r")
                     print(file.read())
                     print("Currently R1: C,D,E are not avaliable")
                     print("Direct " + planeName + " to one of the avaliable runaways")
                     command = input("Ok, what else?")
-                elif command =="4":
-                    print("LOADING... \n SAVING CHANGES... \n "+username +"LOG OUT")
+            else:
+                print("LOADING... \n SAVING CHANGES... \n "+username +"  LOG OUT")
+                break
         else:
             print("ACCESS DENIED ")
             break
-    if command =="4" and username in AirtrafficControllers  :
-        print("LOADING... \n SAVING CHANGES... \n "+username +"LOG OUT")
-        break
-
     else:
         print("ACCESS DENIED")
         break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
